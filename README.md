@@ -3,7 +3,7 @@ Very Sempil Bot Auto Filter bot
 ##[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Bot+Name+»+Coby+Filter+Bot!;created+by+Coby+Support+Team!;A+simple+autofilter+Bot!;Auto+filter+with+double+button!;start+message+with+pic!;and+all+futures!)
 </p>
 
-[![Deploy](https://telegra.ph/file/d35d46c4b9f7bfc79564e.jpg)]
+[Coby](https://telegra.ph/file/161f17f675ce33fe2aaf2.jpg)
 
 ᴀᴜᴛᴏғɪʟᴛᴇʀ ʙᴏᴛ ᴡɪᴛʜ ᴀᴅᴠᴀɴᴄᴇᴅ ғᴇᴀᴛᴜʀᴇs
 
