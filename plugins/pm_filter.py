@@ -97,7 +97,7 @@ async def next_page(bot, query):
         ]
     )
 
-    if 0 < offset <= 6:
+    if 0 < offset <= 5:
         off_set = 0
     elif offset == 0:
         off_set = None
@@ -105,16 +105,24 @@ async def next_page(bot, query):
         off_set = offset - 6
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{round(int(offset)/10)+1} - {round(total/10)}", callback_data="pages"), InlineKeyboardButton("ᴅᴇʟᴇᴛᴇ", callback_data="close_pages")]
+            [InlineKeyboardButton("⏪ ᴘʀᴇᴠɪᴏᴜs", callback_data=f"next_{req}_{key}_{off_set}"),
+             InlineKeyboardButton(f"ᴘᴀɢᴇs {round(int(offset) / 10) + 1} / {round(total / 10)}",
+                                  callback_data="pages")]
         )
     elif off_set is None:
-        btn.append([InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"),InlineKeyboardButton(f"{round(int(offset)/10)+1} - {round(total/10)}", callback_data="pages"), InlineKeyboardButton("ɴᴇxᴛ", callback_data=f"next_{req}_{key}_{n_offset}")])
+        btn.append(
+            [
+                InlineKeyboardButton("ᴘᴀɢᴇs", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton(f"{round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
+                InlineKeyboardButton("ɴᴇxᴛ", callback_data=f"next_{req}_{key}_{n_offset}")
+            ],
+        )
     else:
         btn.append(
             [
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"{round(int(offset)/10)+1} - {round(total/10)}", callback_data="pages"),
-                InlineKeyboardButton("ɴᴇxᴛ", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("⏪ ᴘʀᴇᴠɪᴏᴜs", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton(f"{round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
+                InlineKeyboardButton("ɴᴇxᴛ ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     try:
